@@ -1,0 +1,18 @@
+@use './mix-ins' as *;
+
+
+@font-face { 
+    font-family: 'Avenir Next';
+    src: url('/src/assets/fonts/AvenirNextLTPro-Bold.otf') format("opentype");
+    src: url('/src/assets/fonts/AvenirNextLTProBold.ttf') format("opentype");
+    font-style: normal;
+    font-weight: 700;
+} 
+
+@font-face {
+    font-family: 'Avenir Next';
+    src: url('/src/assets/fonts/AvenirNextLTPro-Regular.otf') format("opentype");
+    src: url('/src/assets/fonts/AvenirNextLTPro.ttf') format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}

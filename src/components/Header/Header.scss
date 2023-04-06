@@ -1,0 +1,55 @@
+.BrainFlix__header {
+  padding: 5% 0 3% 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo {
+  margin-left: 30%;
+}
+
+.header__searchbar {
+  width: 65vw;
+  padding: 3% 0 3% 10%;
+  margin-left: 5%;
+  border-radius: 5px;
+  background-color: #fafafa;
+  background-image: url(../../assets/images/search.svg);
+  background-repeat: no-repeat;
+  background-position: 5% 40%;
+  border-color: silver;
+}
+
+.header__profile {
+  height: 13vw;
+  width: 13vw;
+  position: relative;
+  left: 10px;
+  top: 15px;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.header__upload--section {
+  padding: 5% 0 5% 5%;
+}
+
+.header__upload--icon {
+  display: flex;
+  padding-left: 5%;
+  position: relative;
+}
+
+.header__upload--button {
+  font-weight: 500;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+  background-color: #0095ff;
+  border-radius: 5px;
+  padding: 3% 35% 3% 0;
+}

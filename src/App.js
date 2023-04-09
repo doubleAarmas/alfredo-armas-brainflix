@@ -6,7 +6,6 @@ import PlayingVideo from "./components/PlayingVideo/PlayingVideo";
 import VideoList from "./components/VideoList/VideoList";
 import videosListData from "./data/videos.json";
 import videoSection from "../src/data/video-details.json";
-// import VideoComponents from "./components/MainVideo/VideoComponents";
 
 function App() {
   const [videos, setVideos] = useState(videosListData);

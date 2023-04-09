@@ -10,18 +10,24 @@ function Header() {
         <div>
           <img src={Logo} className="header__logo" alt="Header-logo"></img>
         </div>
-        <input type="text" placeholder="Search" className="header__searchbar" />
-        <img src={Mohan} className="header__profile" alt="Header-profile"></img>
-        <div className="header__upload--section">
-          <button type="submit" className="header__upload--button">
-            <img
-              src={Upload}
-              className="header__upload--icon"
-              alt="upload icon"
-            ></img>
-            UPLOAD
-          </button>
+        <div className="header__subcontainer">
+          <input
+            type="text"
+            placeholder="Search"
+            className="header__searchbar"
+          />
+          <div className="header__upload--section">
+            <button type="submit" className="header__upload--button">
+              <img
+                src={Upload}
+                className="header__upload--icon"
+                alt="upload icon"
+              ></img>
+              UPLOAD
+            </button>
+          </div>
         </div>
+        <div className="header__profile"></div>
       </header>
     </div>
   );

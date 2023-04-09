@@ -4,12 +4,13 @@ import "./PlayingVideo.scss";
 
 function PlayingVideo({ selectedVideo }) {
   return (
-    <div>
+    <div className="main__video">
       {/* needs a poster in the video for the image background while loading */}
       <video
+        className="main__video--actual"
         controls
-        width="390"
-        height="300"
+        width="320"
+        height="180"
         poster={selectedVideo.image}
         type="video/mp4"
       ></video>

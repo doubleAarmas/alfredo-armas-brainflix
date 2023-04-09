@@ -1,15 +1,20 @@
 import VideoListItem from "../VideoListItem/VideoListItem";
+import "./VideoList.scss";
 
 function VideoList({ clickHandler, videos }) {
   return (
-    <div className="nav">
-      {videos.map((videos) => (
-        <VideoListItem
-          key={videos.id}
-          videos={videos}
-          clickHandler={clickHandler}
-        />
-      ))}
+    <div>
+      <p className="video__list--header"> NEXT VIDEOS</p>
+
+      <div className="nav">
+        {videos.map((videos) => (
+          <VideoListItem
+            key={videos.id}
+            videos={videos}
+            clickHandler={clickHandler}
+          />
+        ))}
+      </div>
     </div>
   );
 }

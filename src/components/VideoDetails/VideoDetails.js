@@ -12,10 +12,12 @@ function VideoDetails({ selectedVideo }) {
 
   return (
     <div className="video__details">
-      <h1 className="video__details--title">{title}</h1>
-      <div className="video__details--subsection">
-        <h4 className="video__details--channel">By {channel}</h4>
-        <p className="video__details--timestamp">{formattedDate}</p>
+      <div className="video__details--larger">
+        <h1 className="video__details--title">{title}</h1>
+        <div className="video__details--subsection">
+          <h4 className="video__details--channel">By {channel}</h4>
+          <p className="video__details--timestamp">{formattedDate}</p>
+        </div>
       </div>
       <div className="video__details--subsection2">
         <div className="video__details--views-icon"></div>

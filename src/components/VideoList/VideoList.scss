@@ -1,3 +1,5 @@
+@import "../../styles/mix-ins";
+
 * {
   padding: 0;
   margin: 0;
@@ -5,4 +7,16 @@
 
 .video__list--header {
   padding-left: 16px;
+  color: silver;
+  font-weight: 500;
+  padding: 0 0 16px 16px;
+  position: relative;
+  @include tablet {
+    padding-left: 30px;
+  }
+  @include desktop {
+    position: relative;
+    left: 1000px;
+    bottom: 720px;
+  }
 }

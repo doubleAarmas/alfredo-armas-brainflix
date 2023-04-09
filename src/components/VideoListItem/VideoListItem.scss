@@ -1,3 +1,5 @@
+@import "../../styles/mix-ins";
+
 * {
   padding: 0;
   margin: 0;
@@ -5,13 +7,15 @@
 
 .video__list {
   padding: 0 0 10px 16px;
-  &--header {
-    padding-bottom: 16px;
-    color: silver;
-    font-weight: 500;
-  }
   &--container {
     position: relative;
+    @include tablet {
+      padding: 16px 0 30px 16px;
+    }
+    @include desktop {
+      position: relative;
+      left: 500px;
+    }
   }
   &--image {
     border-radius: 4px;
@@ -22,9 +26,25 @@
     position: absolute;
     top: 10px;
     padding-bottom: 16px;
+    @include tablet {
+      width: 20vw;
+      height: 13vw;
+    }
+    @include desktop {
+      width: 12vw;
+      height: 8vw;
+      left: 500px;
+      top: -700px;
+    }
   }
   &--image-container {
     padding-bottom: 20px;
+    @include tablet {
+      padding-bottom: 20px;
+    }
+    @include desktop {
+      padding-bottom: 80px;
+    }
   }
   &--data-container {
     margin-left: 45%;
@@ -32,9 +52,28 @@
     flex-direction: column;
     margin-top: -25px;
     padding-bottom: 24px;
+    @include tablet {
+      margin-left: 25%;
+      width: 22%;
+    }
+    @include desktop {
+      width: 10%;
+      position: absolute;
+      left: 100px;
+      bottom: 620px;
+      padding-bottom: 40px;
+    }
   }
   &--title {
     padding-bottom: 16px;
     font-size: 14px;
+    @include desktop {
+      padding-bottom: 0;
+    }
+  }
+  &--channel {
+    @include desktop {
+      padding-bottom: 40px;
+    }
   }
 }

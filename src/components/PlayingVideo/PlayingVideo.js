@@ -9,8 +9,6 @@ function PlayingVideo({ selectedVideo }) {
       <video
         className="main__video--actual"
         controls
-        width="320"
-        height="180"
         poster={selectedVideo.image}
         type="video/mp4"
       ></video>

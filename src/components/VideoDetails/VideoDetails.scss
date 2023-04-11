@@ -13,7 +13,7 @@
   @include desktop {
     width: 70%;
     border-right: 0.125rem solid #e1e1e1;
-    padding-left: 5%;
+    padding-left: 0;
   }
 
   &--larger {
@@ -52,10 +52,7 @@
     }
     @include desktop {
       flex-direction: row;
-      padding: 3rem 0;
-      position: relative;
-      top: 2.5rem;
-      right: 22.5rem;
+      padding: 10px 0 10px 65px;
     }
   }
   &--subsection2 {
@@ -68,8 +65,7 @@
     }
     @include desktop {
       flex-direction: row;
-      bottom: 0;
-      left: 37.5rem;
+      padding: 10px 280px 0 0;
     }
   }
   &--channel {
@@ -86,19 +82,16 @@
     }
     @include desktop {
       margin-top: 0;
-      padding-left: 1.5rem;
+      padding-left: 24px;
     }
   }
   &--views {
     color: silver;
     @include tablet {
-      bottom: 5.625rem;
-      right: 1.875rem;
+      padding: 0 0.9375rem 0 0;
     }
     @include desktop {
-      bottom: 0;
-      top: 2.1875rem;
-      right: 1.875rem;
+      padding: 0 0.9375rem 0 0;
     }
     &-container {
       display: flex;
@@ -111,15 +104,6 @@
     height: 1.25rem;
     padding: 5px 5px 0 0;
     margin-top: 3px;
-    @include tablet {
-      bottom: 5.5rem;
-      right: 10rem;
-    }
-    @include desktop {
-      bottom: 0;
-      top: 2.375rem;
-      right: 10rem;
-    }
   }
   &--likes {
     color: silver;
@@ -127,11 +111,7 @@
     @include tablet {
       padding: 0 0 0 10px;
     }
-    @include desktop {
-      bottom: 0;
-      top: 2.1875rem;
-      left: 3.125rem;
-    }
+
     &-container {
       display: flex;
     }
@@ -142,15 +122,6 @@
     width: 1.5625rem;
     height: 1.25rem;
     margin-top: 5px;
-    @include tablet {
-      bottom: 5.4375rem;
-      right: 3rem;
-    }
-    @include desktop {
-      bottom: 0;
-      top: 2.5rem;
-      left: 5.625rem;
-    }
   }
   &--description {
     text-align: left;
@@ -206,15 +177,15 @@
   border-radius: 50%;
   background-size: cover;
   margin-top: 40px;
-
   @include tablet {
     width: 8vw;
     height: 8vw;
     margin-top: 10px;
   }
   @include desktop {
-    width: 18vw;
-    height: 18vw;
+    width: 5vw;
+    height: 5vw;
+    margin: 0 0 10px 50px;
   }
 }
 
@@ -229,7 +200,7 @@
   }
   @include desktop {
     flex-direction: row;
-    width: 90%;
+    width: 80%;
   }
   &--label {
     padding: 1rem 0 0.5rem 0;
@@ -240,12 +211,13 @@
       padding: 1rem 0 1rem 0;
     }
     @include desktop {
-      position: absolute;
-      bottom: 4.6875rem;
-      padding: 1rem 0 1rem 6.25rem;
+      padding: 16px 0 16px 60px;
     }
     &-container {
       padding: 0 0 10px 10px;
+      @include desktop {
+        padding: 0 60px 0 0;
+      }
     }
   }
   &--box {
@@ -262,8 +234,8 @@
     @include desktop {
       width: 35vw;
       height: 2vw;
-      padding: 0.9375rem 0 0 0.625rem;
-      margin-left: 6.25rem;
+      padding: 15px 0 0 15px;
+      margin-left: 60px;
     }
   }
   &--button {
@@ -287,11 +259,10 @@
     }
     @include desktop {
       width: 15vw;
-      margin-top: 0;
+      margin-top: 20px;
       margin-bottom: 1.25rem;
-      padding: 0 2rem 0.625rem 0.625rem;
+      padding: 0 32px 10px 25px;
       height: 3.5vw;
-      left: 1.875rem;
       font-size: 0.75rem;
     }
   }
@@ -323,7 +294,7 @@
     position: absolute;
     left: 1.25rem;
     @include desktop {
-      left: 10rem;
+      left: 6rem;
     }
   }
   &--headers {

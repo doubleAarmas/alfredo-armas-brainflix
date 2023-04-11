@@ -3,7 +3,7 @@ import "./VideoList.scss";
 
 function VideoList({ clickHandler, videos }) {
   return (
-    <div>
+    <div className="video__list--main-container">
       <p className="video__list--header"> NEXT VIDEOS</p>
 
       <div className="nav">

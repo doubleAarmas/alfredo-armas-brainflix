@@ -9,7 +9,8 @@ import videosListData from "./data/videos.json";
 import videoSection from "../src/data/video-details.json";
 
 function App() {
-  const [videos, setVideos] = useState(videosListData);
+  const slicedData = videosListData.slice(1);
+  const [videos, setVideos] = useState(slicedData);
 
   const [selectedVideo, setSelectedVideo] = useState(videoSection[0]);
 
@@ -28,8 +29,10 @@ function App() {
     <div>
       <Header />
       <PlayingVideo selectedVideo={selectedVideo} />
-      <VideoDetails selectedVideo={selectedVideo} />
-      <VideoList clickHandler={videoClick} videos={videos} />
+      <div className="video__components">
+        <VideoDetails selectedVideo={selectedVideo} />
+        <VideoList clickHandler={videoClick} videos={videos} />
+      </div>
     </div>
   );
 }

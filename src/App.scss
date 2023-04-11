@@ -1,1 +1,8 @@
 @import "./styles/mix-ins";
+
+.video__components {
+  @include desktop {
+    display: flex;
+    align-items: flex-start;
+  }
+}

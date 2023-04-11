@@ -40,6 +40,7 @@
 }
 
 .header__subcontainer {
+  display: flex;
   @include tablet {
     display: flex;
     position: relative;
@@ -48,7 +49,7 @@
   @include desktop {
     display: flex;
     position: relative;
-    left: 25rem;
+    left: 500px;
   }
 }
 
@@ -79,23 +80,17 @@
 .header__profile {
   height: 13vw;
   width: 13vw;
-  position: absolute;
-  left: 16.875rem;
-  top: 2.5rem;
   border-radius: 50%;
   background-image: url(../../assets/images/Mohan-muruge.jpg);
   background-size: cover;
+  margin-right: 16px;
   @include tablet {
-    left: 43.4375rem;
-    top: 1.875rem;
     height: 8vw;
-    width: 8vw;
+    width: 9vw;
   }
   @include desktop {
-    left: 65.625rem;
-    top: 3.125rem;
-    height: 7vw;
-    width: 7vw;
+    height: 5vw;
+    width: 6vw;
   }
 }
 
@@ -107,14 +102,13 @@
   }
   @include desktop {
     width: 20vw;
-    padding: 0 0 0 5%;
+    padding: 0 5% 0 5%;
   }
 }
 
 .header__upload--icon {
   display: flex;
   padding-left: 5%;
-  position: relative;
   @include tablet {
     padding: 6%;
   }
@@ -123,23 +117,55 @@
   }
 }
 
-.header__upload--button {
+.header__upload--button-small-resolution {
   font-weight: 700;
   line-height: 20px;
   font-size: 0.625rem;
+  letter-spacing: 1px;
   width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
-  position: relative;
   background-color: #0095ff;
   border-radius: 0.3125rem;
   padding: 3% 35% 3% 0;
   @include tablet {
-    font-size: 0.75rem;
+    display: none;
   }
   @include desktop {
+    display: none;
+  }
+}
+
+.header__upload--button-large-resolution {
+  display: none;
+  @include tablet {
+    font-weight: 700;
+    line-height: 20px;
     font-size: 0.75rem;
+    letter-spacing: 1px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #0095ff;
+    border-radius: 0.3125rem;
+    padding: 3% 35% 3% 0;
+  }
+  @include desktop {
+    font-weight: 700;
+    line-height: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #0095ff;
+    border-radius: 0.3125rem;
+    padding: 3% 35% 3% 0;
   }
 }

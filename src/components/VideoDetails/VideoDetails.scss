@@ -17,6 +17,8 @@
   }
 
   &--larger {
+    display: flex;
+    justify-content: space-between;
     @include tablet {
       display: flex;
     }
@@ -32,9 +34,11 @@
     @include tablet {
       font-size: 2.0625rem;
       line-height: 2.75rem;
+      border-bottom: none;
     }
     @include desktop {
       padding: 1.5rem 0 1rem 4rem;
+      border-bottom: none;
     }
   }
   &--subsection {
@@ -44,10 +48,7 @@
     padding: 1rem 0;
     @include tablet {
       flex-direction: row;
-      padding: 3rem 0;
-      position: relative;
-      top: 2.5rem;
-      right: 30.625rem;
+      padding: 10px 0;
     }
     @include desktop {
       flex-direction: row;
@@ -60,14 +61,10 @@
   &--subsection2 {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 12.5rem;
-    bottom: 50px;
-    // ask why the subsection gets wonky once the video changes
+    padding: 1rem 0;
     @include tablet {
       flex-direction: row;
-      bottom: 0;
-      left: 37.5rem;
+      padding: 10px 30px;
     }
     @include desktop {
       flex-direction: row;
@@ -93,8 +90,6 @@
     }
   }
   &--views {
-    position: relative;
-    bottom: 7.5rem;
     color: silver;
     @include tablet {
       bottom: 5.625rem;
@@ -105,15 +100,17 @@
       top: 2.1875rem;
       right: 1.875rem;
     }
+    &-container {
+      display: flex;
+    }
   }
   &--views-icon {
     background-image: url(../../assets/images/views.svg);
     background-repeat: no-repeat;
     width: 1.5625rem;
     height: 1.25rem;
-    position: absolute;
-    right: 5rem;
-    bottom: 8.625rem;
+    padding: 5px 5px 0 0;
+    margin-top: 3px;
     @include tablet {
       bottom: 5.5rem;
       right: 10rem;
@@ -125,17 +122,18 @@
     }
   }
   &--likes {
-    position: relative;
-    bottom: 6.875rem;
     color: silver;
+    padding: 0 0 0 7px;
     @include tablet {
-      bottom: 5.625rem;
-      left: 0.625rem;
+      padding: 0 0 0 10px;
     }
     @include desktop {
       bottom: 0;
       top: 2.1875rem;
       left: 3.125rem;
+    }
+    &-container {
+      display: flex;
     }
   }
   &--likes-icon {
@@ -143,9 +141,7 @@
     background-repeat: no-repeat;
     width: 1.5625rem;
     height: 1.25rem;
-    position: absolute;
-    right: 4.875rem;
-    bottom: 6.6875rem;
+    margin-top: 5px;
     @include tablet {
       bottom: 5.4375rem;
       right: 3rem;
@@ -175,7 +171,7 @@
   &--comments-title {
     font-weight: 700;
     @include tablet {
-      padding: 0.625rem 0 2.5rem 0;
+      padding: 10px 0 40px 0;
     }
     @include desktop {
       padding: 0.625rem 0 2.5rem 3.75rem;
@@ -195,6 +191,7 @@
 .comment__form--container {
   position: relative;
   border-bottom: 2px solid #e1e1e1;
+  display: flex;
   @include desktop {
     padding: 0 0 0 1rem;
   }
@@ -202,26 +199,22 @@
 
 .comment__form--image {
   background-image: url(../../assets/images/Mohan-muruge.jpg);
-  max-width: 2.25rem;
-  max-height: 2.25rem;
-  width: 13vw;
-  height: 13vw;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-size: cover;
-  position: absolute;
-  right: 15.625rem;
-  top: 2.5rem;
+  margin-top: 40px;
+
   @include tablet {
-    right: 43.75rem;
-    width: 15vw;
-    height: 15vw;
-    top: 0.625rem;
+    width: 8vw;
+    height: 8vw;
+    margin-top: 10px;
   }
   @include desktop {
-    right: 48.75rem;
     width: 18vw;
     height: 18vw;
-    top: 0rem;
   }
 }
 
@@ -229,7 +222,7 @@
   display: flex;
   flex-direction: column;
   width: 85%;
-  padding: 0 0 1rem 2.5rem;
+  padding: 0 0 1rem 0.5rem;
   @include tablet {
     flex-direction: row;
     width: 90%;
@@ -244,14 +237,15 @@
     font-weight: 600;
     font-size: 0.8125rem;
     @include tablet {
-      position: absolute;
-      bottom: 13.125rem;
       padding: 1rem 0 1rem 0;
     }
     @include desktop {
       position: absolute;
       bottom: 4.6875rem;
       padding: 1rem 0 1rem 6.25rem;
+    }
+    &-container {
+      padding: 0 0 10px 10px;
     }
   }
   &--box {
@@ -261,7 +255,7 @@
     font-weight: 550;
     background-color: #fafafa;
     @include tablet {
-      width: 60vw;
+      width: 55vw;
       height: 5vw;
       padding: 0.9375rem 0 0 0.625rem;
     }
@@ -285,11 +279,10 @@
     line-height: 1.25rem;
     @include tablet {
       width: 25vw;
-      margin-top: 0;
+      margin-top: 20px;
       margin-bottom: 1.25rem;
       padding: 0 2rem 0.625rem 2.5rem;
       height: 7.5vw;
-      left: 1.875rem;
       font-size: 0.75rem;
     }
     @include desktop {

@@ -1,5 +1,6 @@
 import "./App.scss";
 import { useState } from "react";
+import { Route, Routes, Link } from "react-router-dom";
 import Header from "./components/Header/Header";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
 import PlayingVideo from "./components/PlayingVideo/PlayingVideo";
@@ -18,7 +19,7 @@ function App() {
     );
     setSelectedVideo(foundVideo);
     const filteredVideos = videoSection.filter(
-      (videoInformation) => videoInformation.id !== selectedVideo.id
+      (videoInformation) => videoInformation.id !== videoId
     );
     setVideos(filteredVideos);
   };

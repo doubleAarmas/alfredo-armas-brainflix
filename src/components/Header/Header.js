@@ -17,7 +17,10 @@ function Header() {
             className="header__searchbar"
           />
           <div className="header__upload--section">
-            <button type="submit" className="header__upload--button">
+            <button
+              type="submit"
+              className="header__upload--button-large-resolution"
+            >
               <img
                 src={Upload}
                 className="header__upload--icon"
@@ -26,8 +29,22 @@ function Header() {
               UPLOAD
             </button>
           </div>
+          <div className="header__profile"></div>
         </div>
-        <div className="header__profile"></div>
+
+        <div className="header__upload--section">
+          <button
+            type="submit"
+            className="header__upload--button-small-resolution"
+          >
+            <img
+              src={Upload}
+              className="header__upload--icon"
+              alt="upload icon"
+            ></img>
+            UPLOAD
+          </button>
+        </div>
       </header>
     </div>
   );

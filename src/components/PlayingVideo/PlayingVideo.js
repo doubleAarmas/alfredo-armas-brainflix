@@ -5,7 +5,6 @@ import "./PlayingVideo.scss";
 function PlayingVideo({ selectedVideo }) {
   return (
     <div className="main__video">
-      {/* needs a poster in the video for the image background while loading */}
       <video
         className="main__video--actual"
         controls

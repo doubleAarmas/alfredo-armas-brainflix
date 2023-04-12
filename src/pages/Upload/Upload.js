@@ -2,7 +2,7 @@ import "./Upload.scss";
 import { useState } from "react";
 import Header from "../../components/Header/Header";
 
-function App() {
+function Upload() {
   return (
     <div>
       <Header />
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default upload;
+export default Upload;

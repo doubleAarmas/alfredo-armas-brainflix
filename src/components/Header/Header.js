@@ -33,17 +33,19 @@ function Header() {
       </div>
 
       <div className="header__upload--section">
-        <button
-          type="submit"
-          className="header__upload--button-small-resolution"
-        >
-          <img
-            src={Upload}
-            className="header__upload--icon"
-            alt="upload icon"
-          ></img>
-          UPLOAD
-        </button>
+        <Link to="/upload" className="upload__link">
+          <button
+            type="submit"
+            className="header__upload--button-small-resolution"
+          >
+            <img
+              src={Upload}
+              className="header__upload--icon"
+              alt="upload icon"
+            ></img>
+            UPLOAD
+          </button>{" "}
+        </Link>
       </div>
     </header>
   );

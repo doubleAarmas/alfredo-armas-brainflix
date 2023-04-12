@@ -11,9 +11,9 @@
   margin: 0 1rem 0 1rem;
   padding: 0 0 1rem 1rem;
   @include desktop {
-    width: 70%;
+    width: 80%;
     border-right: 0.125rem solid #e1e1e1;
-    padding-left: 0;
+    padding-left: 4rem;
   }
 
   &--larger {
@@ -133,7 +133,7 @@
       width: 95%;
     }
     @include desktop {
-      font-size: 0.875rem;
+      font-size: 1rem;
       line-height: 1.375rem;
       width: 90%;
       padding: 0.625rem 0 3.125rem 3.75rem;
@@ -294,7 +294,7 @@
     position: absolute;
     left: 1.25rem;
     @include desktop {
-      left: 6rem;
+      left: 11rem;
     }
   }
   &--headers {

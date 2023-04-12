@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .BrainFlix__header {
@@ -11,12 +12,23 @@
   display: flex;
   flex-direction: column;
   @include tablet {
+    width: 100%;
     flex-direction: row;
     padding: 5% 0 3% 1rem;
+    justify-content: space-between;
   }
   @include desktop {
+    width: 100%;
     flex-direction: row;
     padding: 5% 0 3% 1rem;
+    justify-content: space-between;
+  }
+  &--container {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -26,16 +38,16 @@
   max-height: 1.5625rem;
   padding-bottom: 1rem;
   @include tablet {
-    margin: 0;
-    position: absolute;
-    left: 1.875rem;
-    top: 3.125rem;
+    margin: 5px 0 0 0;
+    width: 7.5rem;
+    height: 1.5625rem;
+    padding-bottom: 0;
   }
   @include desktop {
-    margin: 0;
-    position: absolute;
-    left: 1.875rem;
-    top: 4.6875rem;
+    margin: 0 0 0 30%;
+    width: 7.5rem;
+    height: 1.5625rem;
+    padding: 0;
   }
 }
 
@@ -43,13 +55,12 @@
   display: flex;
   @include tablet {
     display: flex;
-    position: relative;
-    left: 10.625rem;
+    padding: 0 0 0 30px;
   }
   @include desktop {
     display: flex;
-    position: relative;
-    left: 500px;
+    justify-content: space-between;
+    padding: 0 0 0 30%;
   }
 }
 
@@ -71,7 +82,7 @@
   }
   @include desktop {
     width: 25vw;
-    height: 2.5rem;
+    height: 3.125rem;
     padding: 1% 0 1% 10%;
     margin-left: 0;
   }
@@ -83,10 +94,11 @@
   border-radius: 50%;
   background-image: url(../../assets/images/Mohan-muruge.jpg);
   background-size: cover;
-  margin-right: 16px;
+  margin-right: 1rem;
   @include tablet {
     height: 8vw;
-    width: 9vw;
+    width: 8vw;
+    margin-top: -0.3125rem;
   }
   @include desktop {
     height: 5vw;
@@ -152,7 +164,7 @@
     color: white;
     background-color: #0095ff;
     border-radius: 0.3125rem;
-    padding: 3% 35% 3% 0;
+    padding: 0 35% 0 0;
   }
   @include desktop {
     font-weight: 700;
@@ -168,4 +180,9 @@
     border-radius: 0.3125rem;
     padding: 3% 35% 3% 0;
   }
+}
+
+.upload__link {
+  all: unset;
+  cursor: pointer;
 }

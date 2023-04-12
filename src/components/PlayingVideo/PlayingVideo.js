@@ -5,12 +5,14 @@ import "./PlayingVideo.scss";
 function PlayingVideo({ selectedVideo }) {
   return (
     <div className="main__video">
-      <video
-        className="main__video--actual"
-        controls
-        poster={selectedVideo.image}
-        type="video/mp4"
-      ></video>
+      <div className="main__video--container">
+        <video
+          className="main__video--actual"
+          controls
+          poster={selectedVideo.image}
+          type="video/mp4"
+        ></video>
+      </div>
     </div>
   );
 }

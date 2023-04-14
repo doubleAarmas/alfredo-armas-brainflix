@@ -36,18 +36,18 @@
   margin-left: 30%;
   max-width: 7.5rem;
   max-height: 1.5625rem;
-  padding-bottom: 1rem;
+  width: 7.5rem;
+  height: 1.5625rem;
+  margin-bottom: 0.5rem;
   @include tablet {
     margin: 5px 0 0 0;
     width: 7.5rem;
     height: 1.5625rem;
-    padding-bottom: 0;
   }
   @include desktop {
-    margin: 0 0 0 30%;
+    margin: 1rem 0 0 30%;
     width: 7.5rem;
     height: 1.5625rem;
-    padding: 0;
   }
 }
 

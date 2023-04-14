@@ -1,11 +1,11 @@
 import "./Upload.scss";
 import { useState } from "react";
-import Header from "../../components/Header/Header";
+import UploadThumbnail from "../../components/UploadThumbnail/UploadThumbnail";
 
 function Upload() {
   return (
     <div>
-      <Header />
+      <UploadThumbnail />
     </div>
   );
 }

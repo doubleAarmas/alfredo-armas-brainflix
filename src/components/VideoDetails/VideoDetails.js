@@ -2,7 +2,8 @@ import Views from "../../assets/images/views.svg";
 import Likes from "../../assets/images/likes.svg";
 import Mohan from "../../assets/images/Mohan-muruge.jpg";
 import "./VideoDetails.scss";
-import Comment from "../../assets/images/add_comment.svg";
+import commentIcon from "../../assets/images/add_comment.svg";
+import CommentList from "../CommentList/CommentList";
 
 function VideoDetails({ selectedVideo }) {
   const { title, channel, timestamp, views, likes, description, comments } =
@@ -32,7 +33,7 @@ function VideoDetails({ selectedVideo }) {
 
       <div className="video__details--description-container">
         <p className="video__details--description">{description}</p>
-        <p className="video__details--comments-title">3 Comments</p>
+        <p className="video__details--comments-title">Comments</p>
       </div>
       <div className="comment__form--container">
         <div className="comment__form--image"></div>
@@ -49,7 +50,7 @@ function VideoDetails({ selectedVideo }) {
           </div>
           <button type="submit" className="comment__form--button">
             <img
-              src={Comment}
+              src={commentIcon}
               className="comment__form--icon"
               alt="comment icon"
             ></img>
@@ -57,30 +58,8 @@ function VideoDetails({ selectedVideo }) {
           </button>
         </form>
       </div>
-      <div className="comment__section">
-        <div className="comment__section--image-placeholder"></div>
-        <div className="comment__section--headers">
-          <h4 className="comment__section--name">{comments[0].name}</h4>
-          <p className="comment__section--timestamp">{comments[0].timestamp}</p>
-        </div>
-        <p className="comment__section--review">{comments[0].comment}</p>
-      </div>
-      <div className="comment__section">
-        <div className="comment__section--image-placeholder"></div>
-        <div className="comment__section--headers">
-          <h4 className="comment__section--name">{comments[1].name}</h4>
-          <p className="comment__section--timestamp">{comments[1].timestamp}</p>
-        </div>
-        <p className="comment__section--review">{comments[1].comment}</p>
-      </div>
-      <div className="comment__section">
-        <div className="comment__section--image-placeholder"></div>
-        <div className="comment__section--headers">
-          <h4 className="comment__section--name">{comments[2].name}</h4>
-          <p className="comment__section--timestamp">{comments[2].timestamp}</p>
-        </div>
-        <p className="comment__section--review">{comments[2].comment}</p>
-      </div>
+
+      <CommentList comments={comments} />
     </div>
   );
 }

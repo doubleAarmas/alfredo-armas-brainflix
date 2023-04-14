@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="BrainFlix__header">
       <div className="BrainFlix__header--container">
-        <NavLink to="/home">
+        <NavLink to="/">
           <img src={Logo} className="header__logo" alt="Header-logo"></img>
         </NavLink>
       </div>

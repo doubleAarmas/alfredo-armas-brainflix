@@ -83,6 +83,7 @@
     width: 35vw;
     font-size: 14px;
     margin-top: -30px;
+    color: black;
     @include tablet {
       width: 22vw;
     }
@@ -93,7 +94,12 @@
     }
   }
   &--channel {
+    color: black;
     @include desktop {
     }
   }
+}
+
+.videoList__link {
+  text-decoration: none;
 }

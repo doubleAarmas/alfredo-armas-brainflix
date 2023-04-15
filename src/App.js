@@ -9,6 +9,7 @@ import videosListData from "./data/videos.json";
 import videoSection from "../src/data/video-details.json";
 import Upload from "./pages/Upload/Upload";
 import Home from "./pages/Home/Home";
+import SelectedVideoHome from "./pages/SelectedVideoHome/SelectedVideoHome";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Upload" element={<Upload />} />
+        <Route path="/SelectedVideoHome/:" element={<SelectedVideoHome />} />
       </Routes>
     </>
   );

@@ -7,39 +7,27 @@ import VideoList from "../../components/VideoList/VideoList";
 
 function Home() {
   const [videos, setVideos] = useState([]);
-
   const [selectedVideo, setSelectedVideo] = useState({});
-
   const videoClick = (videoId) => {
-    axios.get(
-      `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
-    );
-    //   .then((response) => {
-    //     const selectedVideoList = response.data;
-    //     setSelectedVideo(selectedVideoList);
-    //   });
-
-    // const foundVideo = videoSection.find(
-    //   (videoInformation) => videoInformation.id === videoId
-    // );
-    // setSelectedVideo(foundVideo);
-    // const filteredVideoList = filterVideo(videos);
-    // setVideos(filteredVideoList);
+    axios
+      .get(
+        `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
+      )
+      .then((response) => {
+        const selectedVideoList = response.data;
+        setSelectedVideo(selectedVideoList);
+        const filteredVideoList = filterVideos(videos);
+        setVideos(filteredVideoList);
+      });
   };
-
-  //works below
-  function filterVideos(videosArray) {
-    return videosArray.filter(
-      (videosObject) => videosObject.id !== selectedVideo.id
-    );
+  function filterVideos(videosArray, videoId) {
+    return videosArray.filter((videosObject) => videosObject.id !== videoId);
   }
-
   function requestVideoDetails(videoId) {
     return axios.get(
       `https://project-2-api.herokuapp.com/videos/${videoId}/?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
     );
   }
-
   useEffect(() => {
     axios
       .get(
@@ -56,7 +44,6 @@ function Home() {
         setSelectedVideo(mainVideo);
       });
   }, []);
-
   return (
     <>
       <PlayingVideo selectedVideo={selectedVideo} />
@@ -67,5 +54,4 @@ function Home() {
     </>
   );
 }
-
 export default Home;

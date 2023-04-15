@@ -14,20 +14,8 @@ function Home() {
     axios.get(
       `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
     );
-    //   .then((response) => {
-    //     const selectedVideoList = response.data;
-    //     setSelectedVideo(selectedVideoList);
-    //   });
-
-    // const foundVideo = videoSection.find(
-    //   (videoInformation) => videoInformation.id === videoId
-    // );
-    // setSelectedVideo(foundVideo);
-    // const filteredVideoList = filterVideo(videos);
-    // setVideos(filteredVideoList);
   };
 
-  //works below
   function filterVideos(videosArray) {
     return videosArray.filter(
       (videosObject) => videosObject.id !== selectedVideo.id

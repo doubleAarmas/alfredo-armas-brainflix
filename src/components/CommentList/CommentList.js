@@ -1,20 +1,5 @@
 import CommentItem from "../CommentItem/CommentItem";
 
-// function CommentList({ comments }) {
-//   return (
-//     <div className="comments">
-//       {comments.map((commentSingle) => (
-//         <CommentItem
-//           key={commentSingle.id}
-//           comment={commentSingle.comment}
-//           name={commentSingle.name}
-//           timestamp={commentSingle.timestamp}
-//         />
-//       ))}
-//     </div>
-//   );
-// }
-
 function CommentList({ comments }) {
   return (
     <div className="comments">
@@ -24,7 +9,9 @@ function CommentList({ comments }) {
             key={commentSingle.id}
             comment={commentSingle.comment}
             name={commentSingle.name}
-            timestamp={commentSingle.timestamp}
+            timestamp={new Date(commentSingle.timestamp).toLocaleDateString(
+              "en-US"
+            )}
           />
         ))
       ) : (

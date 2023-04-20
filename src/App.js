@@ -17,10 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Upload" element={<Upload />} />
-        <Route
-          path="/SelectedVideoHome/:videoId"
-          element={<SelectedVideoHome />}
-        />
+        <Route path="/SelectedVideoHome/:idFromParams" element={<Home />} />
       </Routes>
     </>
   );

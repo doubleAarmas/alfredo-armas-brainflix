@@ -5,9 +5,9 @@ import "./VideoDetails.scss";
 import commentIcon from "../../assets/images/add_comment.svg";
 import CommentList from "../CommentList/CommentList";
 
-function VideoDetails({ selectedVideo }) {
+function VideoDetails({ playingVideoDetails }) {
   const { title, channel, timestamp, views, likes, description, comments } =
-    selectedVideo;
+    playingVideoDetails;
   const date = new Date(timestamp);
   const formattedDate = date.toLocaleDateString();
 

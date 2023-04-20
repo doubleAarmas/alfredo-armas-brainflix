@@ -1,30 +1,24 @@
 import VideoListItem from "../VideoListItem/VideoListItem";
 import "./VideoList.scss";
+import { Link } from "react-router-dom";
 
-function VideoList({ clickHandler, videos }) {
+function VideoList({ videos }) {
   return (
     <div className="video__list--main-container">
       <p className="video__list--header"> NEXT VIDEOS</p>
-
       <div className="nav">
-        {videos.map((videos) => (
+        {videos.map((video) => (
           <VideoListItem
-            key={videos.id}
-            videos={videos}
-            clickHandler={clickHandler}
+            key={video.id}
+            id={video.id}
+            thumbnail={video.image}
+            title={video.title}
+            channel={video.channel}
           />
         ))}
       </div>
     </div>
   );
 }
-
-// function VideoLists({ clickHandler, video }) {
-//   return (
-//     <button className="nav__button" onClick={() => clickHandler(video.id)}>
-//       {video.title}
-//     </button>
-//   );
-// }
 
 export default VideoList;

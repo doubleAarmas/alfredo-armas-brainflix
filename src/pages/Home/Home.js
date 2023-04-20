@@ -30,12 +30,15 @@ function Home() {
       )
       .then((response) => {
         setPlayingVideo(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-  });
+  }, [videoIdToDisplay]);
 
   function requestVideoDetails(videoId) {
     return axios.get(
-      `https://project-2-api.herokuapp.com/videos/${videoId}/?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
+      `https://project-2-api.herokuapp.com/videos/${videoIdToDisplay}/?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
     );
   }
   //this was the code I was trying last night to load the initial videos

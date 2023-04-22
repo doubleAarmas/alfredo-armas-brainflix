@@ -4,8 +4,7 @@ $BrainFlix-Black: #323232;
 //Silver
 $Silver: #afafaf;
 //Brainflix-Blue: Active form field outline
-$BrainFlix-Blue: #0095ff //background color
-  $Background-color--white #ffffff;
+$BrainFlix-Blue: #0095ff; //background color
 //Video Player Components
 $BrainFlix-DarkBlack: #000000;
 //CTA hover state color
@@ -25,3 +24,19 @@ $Desktop-padding--between: 24px;
 $Mobile-padding--before: 24px;
 $Mobile-padding--after: 16px;
 $Mobile-padding--between: 16px;
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}

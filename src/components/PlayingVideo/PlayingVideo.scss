@@ -20,12 +20,13 @@
     width: 100%;
   }
   &--container {
+    aspect-ratio: 16/9;
     @include tablet {
-      padding-bottom: 56.25%;
+      aspect-ratio: 16/9;
       position: relative;
     }
     @include desktop {
-      padding-bottom: 56.25%;
+      aspect-ratio: 16/9;
       position: relative;
     }
   }

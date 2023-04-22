@@ -1,9 +1,5 @@
 @import "../../styles/mix-ins";
-
-* {
-  padding: 0;
-  margin: 0;
-}
+@import "../../styles/partials/global";
 
 .video__details {
   display: flex;
@@ -141,6 +137,7 @@
   }
   &--comments-title {
     font-weight: 700;
+    padding: 10px 0;
     @include tablet {
       padding: 10px 0 40px 0;
     }

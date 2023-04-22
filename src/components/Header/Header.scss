@@ -1,10 +1,5 @@
 @import "../../styles/mix-ins";
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+@import "../../styles/partials/global";
 
 .BrainFlix__header {
   padding: 5% 0 3% 0;

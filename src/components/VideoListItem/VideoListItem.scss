@@ -1,9 +1,5 @@
 @import "../../styles/mix-ins";
-
-* {
-  padding: 0;
-  margin: 0;
-}
+@import "../../styles/partials/global";
 
 .nav {
   @include desktop {

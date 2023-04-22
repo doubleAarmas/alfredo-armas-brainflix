@@ -24,10 +24,9 @@ function Home() {
     if (videoIdToDisplay === null) {
       return;
     }
+    //needs to be fixed below so the videos will show up from the backend
     axios
-      .get(
-        `https://project-2-api.herokuapp.com/videos/${videoIdToDisplay}/?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
-      )
+      .get(`http://localhost:8080/videos.json${videoIdToDisplay}`)
       .then((response) => {
         setPlayingVideo(response.data);
       })

@@ -1,5 +1,5 @@
 import "./VideoListItem.scss";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function VideoListItem({ id, channel, title, thumbnail }) {
   return (

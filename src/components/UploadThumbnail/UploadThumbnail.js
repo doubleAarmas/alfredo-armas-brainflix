@@ -3,37 +3,29 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg";
-import Publish from "../../assets/images/publish.svg";
 
 function UploadThumbnail() {
-  const formSubmissionRef = useRef();
+  const formSubmissionRef = useRef(null);
 
-  function handlePublish(event) {
-    //need to remove after testing is done to go to home page
-    event.preventDefault();
-    const formSubmissionRefDetails = formSubmissionRef;
-    alert("Upload complete. Redirecting to Home");
-  }
-
-  // const handlePublish = (event) => {
-  //   event.preventDefault();
-  //   const formSubmissionRefDetails = formSubmissionRef.current;
-  //   const newVideo = {
-  //     title: formSubmissionRefDetails.title.value,
-  //     image: "https://i.imgur.com/gwE38BZ.jpeg",
-  //     description: formSubmissionRefDetails.description.value,
-  //   };
-  //   axios
-  //     .post("http://localhost:8080/videos", newVideo)
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((error) => {
-  //       console.log("post error", error);
-  //     });
-  //   alert("Upload complete. Redirecting to Home");
-  //   // window.location.href = '/';
-  // };
+  const handlePublish = (event) => {
+    const formData = new FormData(formSubmissionRef.current);
+    const newVideo = {
+      title: formData.get("title"),
+      image:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQUkswV1alBISqgNnDpOIOo77nItCArJHcYGoQv-f9MnF5H524YXzYUSALl73KBsmfOt8&usqp=CAU",
+      description: formData.get("description"),
+    };
+    console.log(newVideo);
+    axios
+      .post("http://localhost:8080/videos", newVideo)
+      .then((res) => {
+        console.log(res);
+        alert("Upload complete. Redirecting to Home");
+      })
+      .catch((error) => {
+        console.log("post error", error);
+      });
+  };
 
   return (
     <div>
@@ -58,6 +50,7 @@ function UploadThumbnail() {
             <div className="Upload__thumbnail--form-label-box-top">
               <textarea
                 type="text"
+                name="title"
                 className="Upload__thumbnail--description"
                 placeholder="Add a title to your video"
               ></textarea>
@@ -67,6 +60,7 @@ function UploadThumbnail() {
             ADD A VIDEO DESCRIPTION
             <textarea
               type="text"
+              name="description"
               className="Upload__thumbnail--description Upload__thumbnail--description-larger"
               placeholder="Add a description to your video"
             ></textarea>

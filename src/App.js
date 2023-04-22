@@ -1,6 +1,5 @@
 import "./App.scss";
-import { useState } from "react";
-import { Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Upload from "./pages/Upload/Upload";
 import Home from "./pages/Home/Home";

@@ -1,4 +1,4 @@
-import { NavLink, Route, Routes, Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
@@ -24,11 +24,9 @@ function Home() {
     if (videoIdToDisplay === null) {
       return;
     }
-    //needs to be fixed below so the videos will show up from the backend
     axios
       .get(`http://localhost:8080/videos/${videoIdToDisplay}`)
       .then((response) => {
-        console.log(response.data);
         setPlayingVideo(response.data);
       })
       .catch((error) => {
@@ -36,20 +34,11 @@ function Home() {
       });
   }, [videoIdToDisplay]);
 
-  function requestVideoDetails(videoId) {
-    return axios.get(`http://localhost:8080/videos/${videoIdToDisplay}`);
-  }
-  //this was the code I was trying last night to load the initial videos
-  // .get("https://localHost:8080/data/videos.json")
-  const filteredVideoList = videos.filter((video) => {
-    return video.id !== videoIdToDisplay.id;
-  });
   useEffect(() => {
     axios
       .get("http://localhost:8080/videos")
       .then((response) => {
         setVideos(response.data);
-        return requestVideoDetails(response.data[0].id);
       })
       .catch((error) => {
         console.log(error);

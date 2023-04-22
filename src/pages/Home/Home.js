@@ -26,8 +26,9 @@ function Home() {
     }
     //needs to be fixed below so the videos will show up from the backend
     axios
-      .get(`http://localhost:8080/videos.json${videoIdToDisplay}`)
+      .get(`http://localhost:8080/videos/${videoIdToDisplay}`)
       .then((response) => {
+        console.log(response.data);
         setPlayingVideo(response.data);
       })
       .catch((error) => {
@@ -36,27 +37,24 @@ function Home() {
   }, [videoIdToDisplay]);
 
   function requestVideoDetails(videoId) {
-    return axios.get(
-      `https://project-2-api.herokuapp.com/videos/${videoIdToDisplay}/?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79`
-    );
+    return axios.get(`http://localhost:8080/videos/${videoIdToDisplay}`);
   }
   //this was the code I was trying last night to load the initial videos
   // .get("https://localHost:8080/data/videos.json")
-
-  useEffect(() => {
-    axios
-      .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=4411685c-edc5-4991-9b0a-9384dd5c2b79"
-      )
-      .then((response) => {
-        setVideos(response.data);
-        return requestVideoDetails(response.data[0].id);
-      });
-  }, []);
-
   const filteredVideoList = videos.filter((video) => {
     return video.id !== videoIdToDisplay.id;
   });
+  useEffect(() => {
+    axios
+      .get("http://localhost:8080/videos")
+      .then((response) => {
+        setVideos(response.data);
+        return requestVideoDetails(response.data[0].id);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   return (
     <>

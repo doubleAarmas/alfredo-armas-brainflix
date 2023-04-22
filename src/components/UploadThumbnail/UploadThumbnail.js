@@ -1,12 +1,39 @@
 import "./UploadThumbnail.scss";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
+import axios from "axios";
 import Thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import Publish from "../../assets/images/publish.svg";
 
 function UploadThumbnail() {
-  function handlePublish() {
+  const formSubmissionRef = useRef();
+
+  function handlePublish(event) {
+    //need to remove after testing is done to go to home page
+    event.preventDefault();
+    const formSubmissionRefDetails = formSubmissionRef;
     alert("Upload complete. Redirecting to Home");
   }
+
+  // const handlePublish = (event) => {
+  //   event.preventDefault();
+  //   const formSubmissionRefDetails = formSubmissionRef.current;
+  //   const newVideo = {
+  //     title: formSubmissionRefDetails.title.value,
+  //     image: "https://i.imgur.com/gwE38BZ.jpeg",
+  //     description: formSubmissionRefDetails.description.value,
+  //   };
+  //   axios
+  //     .post("http://localhost:8080/videos", newVideo)
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((error) => {
+  //       console.log("post error", error);
+  //     });
+  //   alert("Upload complete. Redirecting to Home");
+  //   // window.location.href = '/';
+  // };
 
   return (
     <div>
@@ -25,7 +52,7 @@ function UploadThumbnail() {
             ></video>{" "}
           </div>
         </label>
-        <form className="Upload__thumbnail--form">
+        <form className="Upload__thumbnail--form" ref={formSubmissionRef}>
           <label className="Upload__thumbnail--form-label">
             TITLE YOUR VIDEO
             <div className="Upload__thumbnail--form-label-box-top">

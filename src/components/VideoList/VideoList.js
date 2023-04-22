@@ -1,6 +1,5 @@
 import VideoListItem from "../VideoListItem/VideoListItem";
 import "./VideoList.scss";
-import { Link } from "react-router-dom";
 
 function VideoList({ videos }) {
   return (
